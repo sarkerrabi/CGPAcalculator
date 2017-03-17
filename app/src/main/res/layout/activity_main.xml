@@ -1,0 +1,376 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:touchscreenBlocksFocus="true"
+    android:gravity="center"
+    android:scrollIndicators="right">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/preGrade"
+                android:id="@+id/preSemGrade"
+                android:width="335dp"
+                android:textSize="25sp"
+                android:textStyle="normal"
+                android:singleLine="false"
+                android:layout_below="@+id/cgpa"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/preGrade"
+                android:layout_alignRight="@+id/curSemGrade"
+                android:layout_alignEnd="@+id/curSemGrade" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/preCourse"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:width="100dp"
+                android:hint="previous"
+                android:gravity="center"
+                android:layout_below="@+id/preSemGrade"
+                android:textStyle="normal"
+                android:focusable="false"
+                android:enabled="false"
+                android:inputType="none"
+                android:scrollIndicators="right" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/preCredit"
+                android:width="80dp"
+                android:gravity="center"
+                android:hint="credit"
+                android:layout_below="@+id/preSemGrade"
+                android:layout_centerHorizontal="true"
+                android:textStyle="normal"
+                android:scrollIndicators="right" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/preGrade"
+                android:width="80dp"
+                android:layout_below="@+id/preSemGrade"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:hint="grade"
+                android:gravity="center"
+                android:textStyle="normal"
+                android:scrollIndicators="right" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="@string/curSemGrade"
+                android:id="@+id/curSemGrade"
+                android:lineSpacingExtra="@dimen/activity_horizontal_margin"
+                android:textStyle="normal"
+                android:layout_below="@+id/preCourse"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:scrollIndicators="right" />
+
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cgpa"
+                android:width="150dp"
+                android:textStyle="bold"
+                android:textSize="40dp"
+                android:layout_toRightOf="@+id/preCredit"
+                android:layout_toEndOf="@+id/preCredit"
+                android:textColor="#d42c4e"
+                android:inputType="none"
+                android:editable="false"
+                android:gravity="center"
+                android:focusable="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/calculate_b"
+                android:id="@+id/calculate_b"
+                android:textSize="15dp"
+                android:layout_below="@+id/cgpa"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="CGPA"
+                android:id="@+id/textView"
+                android:textSize="52dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:singleLine="false"
+                android:textStyle="bold"
+                android:theme="@style/AppTheme" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/curSemGrade"
+                android:orientation="horizontal"
+                android:id="@+id/lat">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:rowCount="4"
+                        android:columnCount="4"
+                        android:orientation="horizontal"
+                        android:id="@+id/gt"
+                        tools:targetApi="ice_cream_sandwich">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1."
+                            android:id="@+id/no_1"
+                            android:layout_alignBottom="@+id/course1"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textSize="30sp"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/course1"
+                            android:gravity="center"
+                            android:hint="course"
+                            android:width="100dp"
+                            android:layout_below="@+id/curSemGrade"
+                            android:layout_toLeftOf="@+id/preCredit"
+                            android:layout_toStartOf="@+id/preCredit"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/credit1"
+                            android:width="80dp"
+                            android:hint="credit"
+                            android:gravity="center"
+                            android:layout_alignTop="@+id/course1"
+                            android:layout_alignRight="@+id/curSemGrade"
+                            android:layout_alignEnd="@+id/curSemGrade"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/grade1"
+                            android:layout_alignTop="@+id/credit1"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:width="80dp"
+                            android:hint="grade"
+                            android:gravity="center"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2."
+                            android:id="@+id/no_2"
+                            android:textSize="30sp"
+                            android:layout_below="@+id/no_1"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/course2"
+                            android:gravity="center"
+                            android:hint="course"
+                            android:width="100dp"
+                            android:layout_below="@+id/course1"
+                            android:layout_alignLeft="@+id/course1"
+                            android:layout_alignStart="@+id/course1"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/credit2"
+                            android:width="80dp"
+                            android:hint="credit"
+                            android:gravity="center"
+                            android:layout_below="@+id/credit1"
+                            android:layout_alignLeft="@+id/credit1"
+                            android:layout_alignStart="@+id/credit1"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/grade2"
+                            android:width="80dp"
+                            android:hint="grade"
+                            android:gravity="center"
+                            android:layout_below="@+id/grade1"
+                            android:layout_alignLeft="@+id/grade1"
+                            android:layout_alignStart="@+id/grade1"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3."
+                            android:id="@+id/no_3"
+                            android:textSize="30sp"
+                            android:layout_below="@+id/course2"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/course3"
+                            android:gravity="center"
+                            android:hint="course"
+                            android:width="100dp"
+                            android:layout_alignTop="@+id/no_3"
+                            android:layout_alignLeft="@+id/course2"
+                            android:layout_alignStart="@+id/course2"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/credit3"
+                            android:width="80dp"
+                            android:hint="credit"
+                            android:gravity="center"
+                            android:layout_alignTop="@+id/course3"
+                            android:layout_alignRight="@+id/curSemGrade"
+                            android:layout_alignEnd="@+id/curSemGrade"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/grade3"
+                            android:width="80dp"
+                            android:hint="grade"
+                            android:gravity="center"
+                            android:layout_alignTop="@+id/credit3"
+                            android:layout_alignLeft="@+id/grade2"
+                            android:layout_alignStart="@+id/grade2"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4."
+                            android:id="@+id/no_4"
+                            android:textSize="30sp"
+                            android:layout_below="@+id/course3"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/course4"
+                            android:gravity="center"
+                            android:hint="course"
+                            android:width="100dp"
+                            android:layout_alignTop="@+id/no_4"
+                            android:layout_alignLeft="@+id/course3"
+                            android:layout_alignStart="@+id/course3"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:ems="10"
+                            android:id="@+id/credit4"
+                            android:width="80dp"
+                            android:hint="credit"
+                            android:gravity="center"
+                            android:layout_alignTop="@+id/course4"
+                            android:layout_alignLeft="@+id/credit3"
+                            android:layout_alignStart="@+id/credit3"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                        <EditText
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/grade4"
+                            android:width="80dp"
+                            android:hint="grade"
+                            android:gravity="center"
+                            android:layout_alignTop="@+id/credit4"
+                            android:layout_alignLeft="@+id/grade3"
+                            android:layout_alignStart="@+id/grade3"
+                            android:textStyle="normal"
+                            android:scrollIndicators="right" />
+
+                    </GridLayout>
+                </ScrollView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
