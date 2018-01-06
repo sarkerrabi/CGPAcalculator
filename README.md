@@ -14,4 +14,4 @@ This App is developed for University Students who struggle to get the correct an
 - Minimum Operating System: Android 2.1
 - Approximate Download Time: Less than 30 seconds
 
-**for full feature [CGPA calculator](https://sarkerrabi.github.io/CGPAcalculatorWiki/)**
+**for full features [CGPA calculator Wiki](https://sarkerrabi.github.io/CGPAcalculatorWiki/)**
